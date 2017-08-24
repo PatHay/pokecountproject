@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                for (var i = 1; i < 152; i++) {
+                    var url = 'http://pokeapi.co/api/v2/pokemon/' + i + '/';
+                    $('#poke').append('<div class = "mon"><p><img src="http://pokeapi.co/media/img/' + i + '.png"</p></div>');
+                    //$.get(url, function (stats) {
+                    //console.log(stats);
+                    //})
+                }
+            });
+        </script>
+        <style type="text/css">
+            img{
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                margin: auto;
+            }
+            .mon{
+                display: inline-block;
+                margin: auto;
+            }
+        </style>        
+    </head>
+    <body>
+        <p id="poke">
+        </p>
+    </body>
+</html>
